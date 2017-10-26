@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+    <html lang="zh">
+     <head> 
+          <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /> 
+          
+              <title>店铺列表-shops.html</title> 
+              <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+              <meta name="description" content="ele.me为你提供上海市登科保洁(长寿路店)附近的海量美食信息，
+                    你可以直接在上面下单订餐，叫外卖还能赚积分，更有惊喜好礼等你拿哦！" /> 
+              <meta name="mobile-agent" content="format=xhtml;url=http://m.ele.me/place/-615736186413943440" /> 
+              <link href="{{ asset('home/css/forward_201503262210.css') }}" type="text/css" rel="stylesheet" /> 
+              <!--[if (gte IE 7)&( lte IE 9)]>
+              <link href="css/forward_iehack_201503262210.css" type="text/css" rel="stylesheet" />
+              <![endif]--> 
+              <link rel="apple-touch-icon-precomposed" href="home/images/apple-touch-icon.png?v=2" /> 
+              <link rel="shortcut icon" href="home/images/favicon.ico?v=2" type="image/x-icon" /> 
+              <script src="{{ asset('/home/js/cdn_detect.js') }}"></script> 
+              <script>
+                 if(!window.CDNReady){var d=new Date;d.setHours(d.getHours()+6);document.cookie="CDNDown=1; domain=ele.me; expires="+d.toUTCString()+"; path=/";if(!window.localStorage.getItem("CDNBackup")){window.localStorage.setItem("CDNBackup",1);location.reload(true)}}
+              </script> 
+          <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <![endif]--> 
+          <script type="text/javascript">
+              var ma = "geoplace/index";
+              var logined = false;
+              var eleme = eleme || {};
+              var start_time = new Date().getTime();
+              var current_username = '';
+              eleme.logined = eleme.logined || false;
+              eleme.ma = eleme.ma || "geoplace/index";
+              eleme.place_id = eleme.place_id || "-615736186413943440";
+              eleme.sessionId = "";
+              eleme.staticHost = "http://static10.elemecdn.com";
+              eleme.host = "ele.me";
+              eleme.api_host = "api.ele.me";
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-2513347-3']);
+              _gaq.push(['_setDomainName', '.ele.me']);
+              _gaq.push(['_setAllowHash', false]);
+              _gaq.push(['_addIgnoredOrganic', '饿了']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么']);
+              _gaq.push(['_addIgnoredOrganic', '¶öÁËÃ´']);
+              _gaq.push(['_addIgnoredOrganic', '饿了吗']);
+              _gaq.push(['_addIgnoredOrganic', '¶öÁËÂð']);
+              _gaq.push(['_addIgnoredOrganic', '饿了网']);
+              _gaq.push(['_addIgnoredOrganic', '饿了吗?']);
+              _gaq.push(['_addIgnoredOrganic', '饿了吧']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么网']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么网上订餐']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么 上海']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么 杭州']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么 北京']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么上海']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么网站']);
+              _gaq.push(['_addIgnoredOrganic', '饿了么杭州']);
+              _gaq.push(['_addIgnoredOrganic', '饿了吗网站']);
+              _gaq.push(['_addIgnoredOrganic', 'ele']);
+              _gaq.push(['_addIgnoredOrganic', 'eleme']);
+              _gaq.push(['_addIgnoredOrganic', 'elema']);
+              _gaq.push(['_addIgnoredOrganic', 'ele.me']);
+              _gaq.push(['_addIgnoredOrganic', 'ele me']);
+              _gaq.push(['_addIgnoredOrganic', 'www.ele.me']);
+              _gaq.push(['_addIgnoredOrganic', 'http://ele.me/']);
+              _gaq.push(['_addIgnoredOrganic', 'http://www.ele.me/']);
+
+              _gaq.push(["_addOrganic", "sogou", "query"]);
+              _gaq.push(["_addOrganic", "so.360.cn", "q"]);
+              _gaq.push(["_addOrganic", "so.com", "q"]);
+              _gaq.push(["_addOrganic", "baidu", "word"]);
+              _gaq.push(['_addOrganic', 'm.baidu', 'word']);
+              _gaq.push(['_addOrganic', 'wap.baidu', 'word']);
+              _gaq.push(['_addOrganic', 'baidu', 'kw']);
+              _gaq.push(['_addOrganic', 'baidu', 'wd']);
+              _gaq.push(["_addOrganic", "soso", "w"]);
+
+              _gaq.push(['_trackPageview']);
+          </script> 
+          <script type="text/javascript" src="{{ asset('/home/js/head_201503262210.js') }}"></script> 
+     </head> 
+     <!--[if IE 8]><body class="lt-ie9 lt-ie10"><![endif]--> 
+     <!--[if IE 9]><body class="lt-ie10"><![endif]--> 
+     <!--[if gt IE 9]><!--> 
+     <body> 
+      <!--<![endif]--> 
+          <link href="home/css/background.css?v=5" type="text/css" rel="stylesheet" /> 
+          <div id="background" style="background-position:1px -10810.138888889px;" class=" night "> 
+             <div id="sun"></div> 
+             <div id="moon"></div> 
+             <div id="clouds"> 
+                <div id="cloudGroup1"> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece1" class="cloudPiece" /> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece2" class="cloudPiece" /> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece3" class="cloudPiece" /> 
+                </div> 
+                <div id="cloudGroup2"> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece4" class="cloudPiece" /> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece5" class="cloudPiece" /> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece6" class="cloudPiece" /> 
+                </div> 
+                <div id="cloudGroup3"> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece7" class="cloudPiece" /> 
+                   <img src="home/images/clouds.png" alt="" id="cloudPiece8" class="cloudPiece" /> 
+                </div> 
+             </div> 
+             <div id="bg_stars"> 
+                <div class="star_type_1_big"> 
+                   <div class="bg_star" id="star1_1"></div> 
+                   <div class="bg_star" id="star1_2"></div> 
+                   <div class="bg_star" id="star1_3"></div> 
+                   <div class="bg_star" id="star1_4"></div> 
+                   <!--             <div class="bg_star" id="star1_5"></div>
+                          <div class="bg_star" id="star1_6"></div> --> 
+                </div> 
+                <div class="star_type_1_normal"> 
+                   <div class="bg_star" id="star1_7"></div> 
+                   <div class="bg_star" id="star1_8"></div> 
+                   <div class="bg_star" id="star1_9"></div> 
+                   <div class="bg_star" id="star1_10"></div> 
+                   <div class="bg_star" id="star1_11"></div> 
+                   <div class="bg_star" id="star1_12"></div> 
+                </div> 
+                <div class="star_type_1_small"> 
+                   <div class="bg_star" id="star1_13"></div> 
+                   <div class="bg_star" id="star1_14"></div> 
+                   <div class="bg_star" id="star1_15"></div> 
+                   <div class="bg_star" id="star1_16"></div> 
+                   <div class="bg_star" id="star1_17"></div> 
+                   <div class="bg_star" id="star1_18"></div> 
+                </div> 
+                <div class="star_type_2_big"> 
+                   <div class="bg_star" id="star2_1"></div> 
+                   <div class="bg_star" id="star2_2"></div> 
+                   <div class="bg_star" id="star2_3"></div> 
+                   <div class="bg_star" id="star2_4"></div> 
+                   <!--             <div class="bg_star" id="star2_5"></div>
+                          <div class="bg_star" id="star2_6"></div> --> 
+                </div> 
+                <div class="star_type_2_normal"> 
+                   <div class="bg_star" id="star2_7"></div> 
+                   <div class="bg_star" id="star2_8"></div> 
+                   <div class="bg_star" id="star2_9"></div> 
+                   <div class="bg_star" id="star2_10"></div> 
+                   <div class="bg_star" id="star2_11"></div> 
+                   <div class="bg_star" id="star2_12"></div> 
+                </div> 
+                <div class="star_type_2_small"> 
+                   <div class="bg_star" id="star2_13"></div> 
+                   <div class="bg_star" id="star2_14"></div> 
+                   <div class="bg_star" id="star2_15"></div> 
+                   <div class="bg_star" id="star2_16"></div> 
+                   <div class="bg_star" id="star2_17"></div> 
+                   <div class="bg_star" id="star2_18"></div> 
+                </div> 
+             </div> 
+          </div> 
+          <div class="full-content-wrapper"> 
+             <header id="topbar" role="banner"> 
+                  
+             </header> 
+             <div class="container"> 
+                <nav class="breadcrumb" data-geohash="wtw3equp">
+                  登科保洁(长寿路店) 
+                 <a class="breadcrumb-switch" href="home/city">[切换地址]</a> 
+                </nav> 
+                <div id="promotion_banner" class="promotion-banner"> 
+                     <ul id="promotion_carousel" class="carousel-wrapper"> 
+                        <li class="carousel-block"> <a rel="nofollow" target="_blank" href="/activity/100millon-bonus" data-id="promotion_banner_100millon-bonus"> <img src="home/images/49c76d8868522e2793b74844b5914gif.gif" /> </a> </li> 
+                        <li class="carousel-block"> <a rel="nofollow" target="_blank" href="/activity/cyzxff20150312" data-id="promotion_banner_cyzxff20150312"> <img src="home/images/795627d940d71323855b99bf36685gif.gif" /> </a> </li> 
+                        <li class="carousel-block"> <a rel="nofollow" target="_blank" href="/activity/xnbonus_2015" data-id="promotion_banner_xnbonus_2015"> <img src="home/images/24afab59cadeac87ec23a51fe5e8dgif.gif" /> </a> </li> 
+                        <li class="carousel-block"> <a rel="nofollow" target="_blank" href="/activity/pinpaiguan1" data-id="promotion_banner_pinpaiguan1"> <img src="home/images/44b92f52c342fe1994164399fd870gif.gif" /> </a> </li> 
+                        <li class="carousel-block"> <a rel="nofollow" target="_blank" href="/activity/sdjb" data-id="promotion_banner_sdjb"> <img src="home/images/10ea2f228dce4ef61c56c52ae5f9agif.gif" /> </a> </li> 
+                     </ul> 
+                     <ol class="carousel_pager carousel-pager"></ol> 
+                </div> 
+                <div class="row favored-restaurants restaurants-row" id="favored-bar"> 
+                     <div class="span12 row-wrapper"> 
+                          <div class="row"> 
+                               <div class="span12 category-restaurant-header"> 
+                                <span class="title">我的收藏</span> 
+                                <span class="right-action"><a href="home/member_collect_shop">设置</a></span> 
+                               </div> 
+                               <div class="span12" id="favored-restaurants"> 
+                                    <table class="restaurant-list-table zebra-striped1"> 
+                                         <tbody> 
+                                              <tr> 
+                                                   @foreach ($collection as $v)
+                                                   <td> 
+                                                        <div class="restaurant-block lite"> 
+                                                             <div class="add-favor">
+                                                              {{ $v->sid }}
+                                                             </div>
+                                                        </div>
+                                                   </td> 
+                                                   @endforeach
+                                              </tr> 
+                                         </tbody> 
+                                    </table> 
+                               </div> 
+                          </div> 
+                     </div> 
+                </div> 
+                <div class="row more-restaurants restaurants-row"> 
+                   <div class="span12 row-wrapper"> 
+                      <div class="row"> 
+                           <div class="span12 category-restaurant-header"> 
+                            <span class="category-restaurant-block"> <a target="_blank" href="/premium/geohash/wtw3equpdm3g">前往 <span class="p-entrance-total" style="color: #fe6000;font: normal 20px/1em Arial,'Helvetica Neue',sans-serif;">69</span> 家品牌餐厅</a> <img src="home/images/deliver-icon.png" /> </span> 
+                           </div> 
+                           <div class="span12"> 
+                              <table class="restaurant-list-table more-restaurant-table"> 
+                                 <tbody> 
+                                    <tr>
+                                       <td> 
+                                          <div class="restaurant-block closed " id="restaurant-46798" rel="46798" data-restaurantid="46798"> 
+                                             <div class="favor-book"> 
+                                                <span class="favor-icon hidden"></span> 
+                                                <a href="#" class="hover-add-favor hidden entry-favor" rel="46798">收藏</a> 
+                                                <a href="#" class="hover-un-favor hidden entry-un-favor" rel="46798">取消收藏</a> 
+                                             </div> 
+                                             <div class="line-one"> 
+                                                <div class="logo-wrapper"> 
+                                                   <div class="logo"> 
+                                                    <a href="http://r.ele.me/ja-hbw1" target="_blank"><img class="restaurant-logo" alt="汉堡王(愚园路店)" srcset="http://fuss10.elemecdn.com/0/3f/9a89983088715705f28999e9ee314png.png?w=42&amp;h=42 1x, http://fuss10.elemecdn.com/0/3f/9a89983088715705f28999e9ee314png.png?w=84&amp;h=84 2x" /></a> 
+                                                   </div> 
+                                                   <div class="deliver-time-wrapper tooltip_on" data-toggle="tooltip" title="平均送餐时间:43分钟">
+                                                     43分钟 
+                                                   </div> 
+                                                </div> 
+                                                <div class="info"> 
+                                                   <div class="name"> 
+                                                      <a class="restaurant-link" href="http://r.ele.me/ja-hbw1" target="_blank">汉堡王(愚园路..</a> 
+                                                   </div> 
+                                                   <div class="status-label closed"> 
+                                                      <span>休息中</span> 
+                                                   </div> 
+                                                   <div class="status-desc closed"> 
+                                                      <span title="已打烊，明天 10:00 开始订餐">已打烊</span> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                             <div class="hidden line-hover-dlg" id="restaurant-hover-dlg-content-46798"> 
+                                                <div class="restaurant-panel"> 
+                                                   <span class="favor-icon hidden"></span> 
+                                                   <div class="restaurant-more-info"> 
+                                                      <div style="font-size:15px; margin-left:10px;">
+                                                        汉堡王(愚园路店)
+                                                      </div> 
+                                                      <p class="closed"><span title="已打烊，明天 10:00 开始订餐">已打烊，明天 10:00 开始订餐</span></p> 
+                                                      <div class="divider hidden"></div> 
+                                                      <ul class="icons"> 
+                                                         <li> <img class="restaurant-icons 9.9元皇堡" title="凡进入饿了么品牌馆汉堡王餐厅内选择带有99的餐品，可以以9.9元的价格购买原价22元的皇堡一份，每个用户每单限点1份，每个用户每天限点3次（此活动新老用户皆可参与）" src="home/images/15255ecfb5364e36985c613f0b26cgif.gif" /> 
+                                                            <span class="desc" title="">凡进入饿了么品牌馆汉堡王餐厅内选择带有99的餐品，可以以9.9元的价格购买原价22元的皇堡一份，每个用户每单限点1份，每个用户每天限点3次（此活动新老用户皆可参与）
+                                                            </span> 
+                                                         </li> 
+                                                         <li> 
+                                                            <span class="restaurant-icons deliver-fee" title="该餐厅订餐需支付配送费5元">&nbsp;</span> 
+                                                            <span class="desc" title="">该餐厅订餐需支付配送费5元</span> 
+                                                         </li> 
+                                                         <li> 
+                                                            <span class="restaurant-icons recoup" title="该餐厅参加超时赔付活动，超90分钟5折。预订单，不参加超时赔付！如遇恶劣环境，如下雨，冰雹等天气，或人力不可抗拒因素！此单不参加超时赔付！">&nbsp;</span> 
+                                                            <span class="desc" title="">该餐厅参加超时赔付活动，超90分钟5折。预订单，不参加超时赔付！如遇恶劣环境，如下雨，冰雹等天气，或人力不可抗拒因素！此单不参加超时赔付！
+                                                            </span> 
+                                                         </li> 
+                                                         <li> 
+                                                            <span class="restaurant-icons invoice" title="该餐厅支持开发票，请在下单时填写好发票抬头">&nbsp;</span> 
+                                                            <span class="desc" title="">该餐厅支持开发票，请在下单时填写好发票抬头</span> 
+                                                         </li> 
+                                                      </ul> 
+                                                      <div class="divider hidden"></div> 
+                                                      <p class="ann"><strong>公告:</strong>&nbsp; 饿了么品牌馆承诺，您的餐品60分钟内送达。如送餐时间超过70分钟,此单7折、超过90分钟,此单5折！超时打折不包含预订单！订餐须知—1:请确保您的电话畅通，以便送餐员能及时联系上您。2:美食烹饪+餐品配送需要一定的时间，为了确保您能及时用餐，希望您提前30分钟以上时间预定下单，避开高峰时期。饿了么【品牌馆咨询专线】：021-52657757 </p> 
+                                                      <p class="restaurant-deliver-desc"><strong>起送价:</strong>&nbsp;到登科保洁(长寿路店) 30元。 （额外说明：)</p> 
+                                                      <p><strong>地址:</strong>&nbsp;静安区愚园路132号</p> 
+                                                      <p><strong>营业时间:</strong>&nbsp;10:00 - 20:30</p> 
+                                                      <p><strong>简介:</strong>&nbsp;Taste is King！Home of the WHOPPER！</p> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                          </div> 
+                                       </td> 
+                                       <td> 
+                                          <div class="restaurant-block closed " id="restaurant-98806" rel="98806" data-restaurantid="98806"> 
+                                             <div class="favor-book"> 
+                                              <span class="favor-icon hidden"></span> 
+                                              <a href="#" class="hover-add-favor hidden entry-favor" rel="98806">收藏</a> 
+                                              <a href="#" class="hover-un-favor hidden entry-un-favor" rel="98806">取消收藏</a> 
+                                             </div> 
+                                             <div class="line-one"> 
+                                                <div class="logo-wrapper"> 
+                                                   <div class="logo"> 
+                                                      <a href="http://r.ele.me/ja-sqj" target="_blank"><img class="restaurant-logo" alt="食其家(长寿路店)" srcset="http://fuss10.elemecdn.com/1/0c/83bf9d1661ff1378dfe4bdde66c38png.png?w=42&amp;h=42 1x, http://fuss10.elemecdn.com/1/0c/83bf9d1661ff1378dfe4bdde66c38png.png?w=84&amp;h=84 2x" />
+                                                      </a> 
+                                                   </div> 
+                                                   <div class="deliver-time-wrapper tooltip_on" data-toggle="tooltip" title="平均送餐时间:44分钟">
+                                                     44分钟 
+                                                   </div> 
+                                                </div> 
+                                                <div class="info"> 
+                                                   <div class="name"> 
+                                                      <a class="restaurant-link" href="http://r.ele.me/ja-sqj" target="_blank">食其家(长寿路..</a> 
+                                                   </div> 
+                                                   <div class="status-label closed"> 
+                                                      <span>休息中</span> 
+                                                   </div> 
+                                                   <div class="status-desc closed"> 
+                                                      <span title="已打烊，明天 10:00 开始订餐">已打烊</span> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                             <div class="hidden line-hover-dlg" id="restaurant-hover-dlg-content-98806"> 
+                                                <div class="restaurant-panel"> 
+                                                 <span class="favor-icon hidden"></span> 
+                                                   <div class="restaurant-more-info"> 
+                                                      <div style="font-size:15px; margin-left:10px;">
+                                                          食其家(长寿路店)
+                                                      </div> 
+                                                      <p class="closed"><span title="已打烊，明天 10:00 开始订餐">已打烊，明天 10:00 开始订餐</span></p><div class="divider hidden"></div> 
+                                                      <ul class="icons"> 
+                                                         <li> 
+                                                            <img class="restaurant-icons 食其家10元牛肉饭" title="食其家活动期间内，活动餐品，原价15元 现价10元且每单限点3份。" src="home/images/f93b67fd796b24d19f51709d4f5c7gif.gif" /> 
+                                                            <span class="desc" title="">食其家活动期间内，活动餐品，原价15元 现价10元且每单限点3份。
+                                                            </span> 
+                                                         </li> 
+                                                         <li> 
+                                                            <span class="restaurant-icons deliver-fee" title="该餐厅订餐需支付配送费5元">&nbsp;</span> 
+                                                            <span class="desc" title="">该餐厅订餐需支付配送费5元</span> 
+                                                         </li> 
+                                                         <li>
+                                                            <span class="restaurant-icons recoup" title="该餐厅参加超时赔付活动，超90分钟5折。预订单，不参加超时赔付！如遇恶劣环境，如下雨，冰雹等天气，或人力不可抗拒因素！此单不参加超时赔付！">&nbsp;</span> 
+                                                            <span class="desc" title="">该餐厅参加超时赔付活动，超90分钟5折。预订单，不参加超时赔付！如遇恶劣环境，如下雨，冰雹等天气，或人力不可抗拒因素！此单不参加超时赔付！</span> 
+                                                         </li> 
+                                                         <li> 
+                                                            <span class="restaurant-icons invoice" title="该餐厅支持开发票，请在下单时填写好发票抬头">&nbsp;</span> 
+                                                            <span class="desc" title="">该餐厅支持开发票，请在下单时填写好发票抬头</span> 
+                                                         </li> 
+                                                      </ul> 
+                                                      <div class="divider hidden"></div> 
+                                                      <p class="ann">
+                                                          <strong>公告:</strong> &nbsp;饿了么品牌馆承诺，您的餐品60分钟内送达。如送餐时间超过70分钟,此单7折、超过90分钟,此单5折！超时打折不包含预订单！订餐须知—1:请确保您的电话畅通，以便送餐员能及时联系上您。2:美食烹饪+餐品配送需要一定的时间，为了确保您能及时用餐，希望您提前30分钟以上时间预定下单，避开高峰时期。饿了么【品牌馆咨询专线】：52657757
+                                                      </p> 
+                                                      <p class="restaurant-deliver-desc">
+                                                          <strong>起送价:</strong>&nbsp;到登科保洁(长寿路店) 30元。 （额外说明：)
+                                                      </p> 
+                                                      <p>
+                                                          <strong>地址:</strong>&nbsp; 普陀区 长寿路155号普陀巴黎春天6楼(近西康路) 
+                                                      </p> 
+                                                      <p>
+                                                          <strong>营业时间:</strong>&nbsp;10:00 - 20:30
+                                                      </p> 
+                                                      <p>
+                                                          <strong>简介:</strong>&nbsp;简餐厅，以“饭类的套餐”为主打，分“大碗、普通和小碗”，价格“从十几到二十几不等”，上的速度“挺快”。牛丼饭“其实就是肥牛盖浇饭”，肉“蛮嫩”，也“挺入味”，米饭拌着汤汁“一会儿就下肚了”。
+                                                      </p> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                          </div> 
+                                       </td> 
+                                       <td> 
+                                          <div class="restaurant-block closed " id="restaurant-46778" rel="46778" data-restaurantid="46778"> 
+                                             <div class="favor-book"> 
+                                                <span class="favor-icon hidden"></span> 
+                                                <a href="#" class="hover-add-favor hidden entry-favor" rel="46778">收藏</a> 
+                                                <a href="#" class="hover-un-favor hidden entry-un-favor" rel="46778">取消收藏</a> 
+                                             </div> 
+                                             <div class="line-one"> 
+                                                <div class="logo-wrapper"> 
+                                                   <div class="logo"> 
+                                                      <a href="http://r.ele.me/ja-mc2" target="_blank">
+                                                          <img class="restaurant-logo" alt="麦当劳（南京西路店）" srcset="http://fuss10.elemecdn.com/d/c1/180d1f2164df5a665b267f7bb9cc0png.png?w=42&amp;h=42 1x, http://fuss10.elemecdn.com/d/c1/180d1f2164df5a665b267f7bb9cc0png.png?w=84&amp;h=84 2x" />
+                                                      </a> 
+                                                   </div> 
+                                                   <div class="deliver-time-wrapper tooltip_on" data-toggle="tooltip" title="平均送餐时间:39分钟">
+                                                       39分钟 
+                                                   </div> 
+                                                </div> 
+                                                <div class="info"> 
+                                                   <div class="name"> 
+                                                    <a class="restaurant-link" href="http://r.ele.me/ja-mc2" target="_blank">麦当劳（南京..</a> 
+                                                   </div> 
+                                                   <div class="status-label closed"> 
+                                                    <span>休息中</span> 
+                                                   </div> 
+                                                   <div class="status-desc closed"> 
+                                                    <span title="已打烊，明天 10:30 开始订餐">已打烊</span> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                             <div class="hidden line-hover-dlg" id="restaurant-hover-dlg-content-46778"> 
+                                                <div class="restaurant-panel"> 
+                                                   <span class="favor-icon hidden"></span> 
+                                                   <div class="restaurant-more-info"> 
+                                                      <div style="font-size:15px; margin-left:10px;">
+                                                       麦当劳（南京西路店）
+                                                      </div> 
+                                                      <p class="closed"><span title="已打烊，明天 10:30 开始订餐">已打烊，明天 10:30 开始订餐</span></p> 
+                                                      <div class="divider hidden"></div> 
+                                                      <ul class="icons"> 
+                                                           <li> 
+                                                                <span class="restaurant-icons deliver-fee" title="该餐厅订餐需支付配送费5元">&nbsp;</span> <span class="desc" title="">该餐厅订餐需支付配送费5元</span> </li> 
+                                                           <li> 
+                                                                <span class="restaurant-icons recoup" title="该餐厅参加超时赔付活动，超90分钟5折。预订单，不参加超时赔付！如遇恶劣环境，如下雨，冰雹等天气，或人力不可抗拒因素！此单不参加超时赔付！">&nbsp;</span> <span class="desc" title="">该餐厅参加超时赔付活动，超90分钟5折。预订单，不参加超时赔付！如遇恶劣环境，如下雨，冰雹等天气，或人力不可抗拒因素！此单不参加超时赔付！</span> 
+                                                           </li> 
+                                                           <li> <span class="restaurant-icons invoice" title="该餐厅支持开发票，请在下单时填写好发票抬头">&nbsp;</span> <span class="desc" title="">该餐厅支持开发票，请在下单时填写好发票抬头</span> 
+                                                           </li> 
+                                                      </ul> 
+                                                      <div class="divider hidden"></div> 
+                                                      <p class="ann"><strong>公告:</strong>&nbsp; 饿了么品牌馆承诺，您的餐品60分钟内送达。如送餐时间超过70分钟,此单7折、超过90分钟,此单5折！超时打折不包含预订单！订餐须知—1:请确保您的电话畅通，以便送餐员能及时联系上您。2:美食烹饪+餐品配送需要一定的时间，为了确保您能及时用餐，希望您提前30分钟以上时间预定下单，避开高峰时期。饿了么【品牌馆咨询专线】：52657757 </p> 
+                                                      <p class="restaurant-deliver-desc"><strong>起送价:</strong>&nbsp;到登科保洁(长寿路店) 19元。 （额外说明：)
+                                                      </p> 
+                                                      <p>
+                                                        <strong>地址:</strong>&nbsp;静安区南京西路1168号中信泰富广场B1楼
+                                                      </p> 
+                                                      <p>
+                                                        <strong>营业时间:</strong>&nbsp;10:30 - 20:30
+                                                      </p> 
+                                                      <p>
+                                                        <strong>简介:</strong>&nbsp; 麦当劳（英语：McDonald's）是全球大型跨国连锁餐厅，1940年创立于美国，在世界上大约拥有3万间分店。主要售卖汉堡包，以及薯条、炸鸡、汽水、冰品、沙拉、水果等快餐食品。
+                                                      </p> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                          </div> 
+                                       </td> 
+                                       <td> 
+                                          <div class="restaurant-block closed " id="restaurant-208138" rel="208138" data-restaurantid="208138"> 
+                                             <div class="favor-book"> 
+                                              <span class="favor-icon hidden"></span> 
+                                              <a href="#" class="hover-add-favor hidden entry-favor" rel="208138">收藏</a> 
+                                              <a href="#" class="hover-un-favor hidden entry-un-favor" rel="208138">取消收藏</a> 
+                                             </div> 
+                                             <div class="line-one"> 
+                                                <div class="logo-wrapper"> 
+                                                   <div class="logo"> 
+                                                    <a href="http://r.ele.me/ja-zmssyyl" target="_blank"><img class="restaurant-logo" alt="吃货三国(余姚店)" srcset="http://fuss10.elemecdn.com/e/68/bc73044bc90b574e408d721a2ab9cjpeg.jpeg?w=42&amp;h=42 1x, http://fuss10.elemecdn.com/e/68/bc73044bc90b574e408d721a2ab9cjpeg.jpeg?w=84&amp;h=84 2x" /></a> 
+                                                   </div> 
+                                                   <div class="deliver-time-wrapper tooltip_on" data-toggle="tooltip" title="餐厅刚开张，暂无送餐时间数据">
+                                                     &nbsp;&nbsp; 
+                                                   </div> 
+                                                </div> 
+                                                <div class="info"> 
+                                                   <div class="name"> 
+                                                    <a class="restaurant-link" href="http://r.ele.me/ja-zmssyyl" target="_blank">吃货三国(余姚..</a> 
+                                                   </div> 
+                                                   <div class="status-label closed"> 
+                                                    <span>休息中</span> 
+                                                   </div> 
+                                                   <div class="status-desc closed"> 
+                                                    <span title="已打烊，明天 14:00 开始订餐">已打烊</span> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                             <div class="hidden line-hover-dlg" id="restaurant-hover-dlg-content-208138"> 
+                                                <div class="restaurant-panel"> 
+                                                   <span class="favor-icon hidden"></span> 
+                                                   <div class="restaurant-more-info"> 
+                                                      <div style="font-size:15px; margin-left:10px;">
+                                                       吃货三国(余姚店)
+                                                      </div> 
+                                                      <p class="closed"><span title="已打烊，明天 14:00 开始订餐">已打烊，明天 14:00 开始订餐</span></p> 
+                                                      <div class="divider hidden"></div> 
+                                                      <ul class="icons"> 
+                                                         <li> 
+                                                            <span class="restaurant-icons new-restaurant" title="新店开张，欢迎光临">&nbsp;</span> <span class="desc" title="">新店开张，欢迎光临</span> 
+                                                         </li> 
+                                                         <li> 
+                                                            <span class="restaurant-icons deliver-fee" title="该餐厅订餐需支付配送费5元">&nbsp;</span> <span class="desc" title="">该餐厅订餐需支付配送费5元</span>
+                                                          </li> 
+                                                      </ul> 
+                                                      <div class="divider hidden"></div> 
+                                                      <p class="ann"><strong>公告:</strong>&nbsp;饿了么品牌馆承诺，您的餐品60分钟内送达。如送餐时间超过70分钟,此单7折、超过90分钟,此单5折！超时打折不包含预订单！订餐须知—1:请确保您的电话畅通，以便送餐员能及时联系上您。2:美食烹饪+餐品配送需要一定的时间，为了确保您能及时用餐，希望您提前30分钟以上时间预定下单，避开高峰时期。饿了么【品牌馆咨询专线】：52657757</p> 
+                                                      <p class="restaurant-deliver-desc"><strong>起送价:</strong>&nbsp;到登科保洁(长寿路店) 30元。 （额外说明：)</p> 
+                                                      <p><strong>地址:</strong>&nbsp;静安区余姚路410号近延平路</p> 
+                                                      <p><strong>营业时间:</strong>&nbsp;14:00 - 17:00</p> 
+                                                      <p><strong>简介:</strong>&nbsp; 活动餐品：蜀香豆皮＋香辣鸭脖＋伯朗咖啡 原价32元 现价15元出售 限时限量 可以预定。</p> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                          </div> 
+                                       </td> 
+                                       <td> 
+                                          <div class="restaurant-block closed " id="restaurant-206770" rel="206770" data-restaurantid="206770"> 
+                                             <div class="favor-book"> 
+                                                <span class="favor-icon hidden"></span> 
+                                                <a href="#" class="hover-add-favor hidden entry-favor" rel="206770">收藏</a> 
+                                                <a href="#" class="hover-un-favor hidden entry-un-favor" rel="206770">取消收藏</a> 
+                                             </div> 
+                                             <div class="line-one"> 
+                                                <div class="logo-wrapper"> 
+                                                   <div class="logo"> 
+                                                    <a href="http://r.ele.me/ja-bskcdlct" target="_blank"><img class="restaurant-logo" alt="必胜客常德餐厅" srcset="http://fuss10.elemecdn.com/c/b0/1b9ae69fabc77f3aadf3ad870896apng.png?w=42&amp;h=42 1x, http://fuss10.elemecdn.com/c/b0/1b9ae69fabc77f3aadf3ad870896apng.png?w=84&amp;h=84 2x" /></a> 
+                                                   </div> 
+                                                   <div class="deliver-time-wrapper tooltip_on" data-toggle="tooltip" title="平均送餐时间:30分钟">
+                                                     30分钟 
+                                                   </div> 
+                                                </div> 
+                                                <div class="info"> 
+                                                   <div class="name"> 
+                                                    <a class="restaurant-link" href="http://r.ele.me/ja-bskcdlct" target="_blank">必胜客常德餐厅</a> 
+                                                   </div> 
+                                                   <div class="status-label closed"> 
+                                                    <span>休息中</span> 
+                                                   </div> 
+                                                   <div class="status-desc closed"> 
+                                                    <span title="已打烊，明天 10:00 开始订餐">已打烊</span> 
+                                                   </div> 
+                                                </div> 
+                                             </div> 
+                                             <div class="hidden line-hover-dlg" id="restaurant-hover-dlg-content-206770"> 
+                                                <div class="restaurant-panel"> 
+                                                     <span class="favor-icon hidden"></span> 
+                                                     <div class="restaurant-more-info"> 
+                                                        <div style="font-size:15px; margin-left:10px;">
+                                                         必胜客常德餐厅
+                                                        </div> 
+                                                        <p class="closed"><span title="已打烊，明天 10:00 开始订餐">已打烊，明天 10:00 开始订餐</span></p> 
+                                                        <div class="divider hidden"></div> 
+                                                        <ul class="icons"> 
+                                                           <li> 
+                                                              <span class="restaurant-icons new-restaurant" title="新店开张，欢迎光临">&nbsp;</span> 
+                                                              <span class="desc" title="">新店开张，欢迎光临</span> 
+                                                           </li> 
+                                                           <li> 
+                                                              <span class="restaurant-icons deliver-fee" title="该餐厅订餐需支付配送费5元">&nbsp;</span> 
+                                                              <span class="desc" title="">该餐厅订餐需支付配送费5元</span> 
+                                                           </li> 
+                                                           <li> 
+                                                              <span class="restaurant-icons recoup" title="该餐厅参加超时赔付活动，超90分钟5折。">&nbsp;</span> <span class="desc" title="">该餐厅参加超时赔付活动，超90分钟5折。</span> 
+                                                           </li> 
+                                                           <li> 
+                                                                <span class="restaurant-icons invoice" title="该餐厅支持开发票，请在下单时填写好发票抬头">&nbsp;</span> 
+                                                                <span class="desc" title="">该餐厅支持开发票，请在下单时填写好发票抬头</span> 
+                                                           </li> 
+                                                        </ul> 
+                                                        <div class="divider hidden"></div> 
+                                                        <p class="ann"><strong>公告:</strong>&nbsp;饿了么品牌馆承诺，您的餐品60分钟内送达。如送餐时间超过70分钟,此单7折、超过90分钟,此单5折！超时打折不包含预订单！订餐须知—1:请确保您的电话畅通，以便送餐员能及时联系上您。2:美食烹饪+餐品配送需要一定的时间，为了确保您能及时用餐，希望您提前30分钟以上时间预定下单，避开高峰时期。饿了么【品牌馆咨询专线】：52657757 本产品价格为必胜客欢乐餐厅外送专用；产品及包装以实物为准；不可使用任何实物或电子形式的优惠券、学生证、产品券、预付/储值卡、代金券等抵扣或支付费用</p> 
+                                                        <p class="restaurant-deliver-desc"><strong>起送价:</strong>&nbsp;到登科保洁(长寿路店) 50元。 （额外说明：)</p> 
+                                                        <p><strong>地址:</strong>&nbsp;静安区长寿路432号</p> 
+                                                        <p><strong>营业时间:</strong>&nbsp;10:00 - 20:30</p> 
+                                                        <p><strong>简介:</strong>&nbsp; </p> 
+                                                     </div> 
+                                                </div> 
+                                             </div> 
+                                          </div> 
+                                       </td> 
+                                    </tr>
+                                 </tbody> 
+                              </table> 
+                           </div> 
+                      </div> 
+                   </div> 
+                </div> 
+                <div class="row promoted-restaurants restaurants-row"> 
+                   <div class="span12 row-wrapper"> 
+                      <div class="row"> 
+                           <div class="span12 category-restaurant-header with-restaurant-filter"> 
+                                <div class="row"> 
+                                     <div class="span12"> 
+                                          <div id="filter-btn-wrapper"> 
+                                               <span class="filter-btn" pinyin="tuijian" ubt-change="filter_tuijian"> <input type="checkbox" name="filter" value="tuijian" /><span class="filter-text tuijian">热门餐厅</span> </span> 
+                                               <span class="filter-btn" pinyin="open" ubt-change="filter_open"> <input type="checkbox" name="filter" value="open" /><span class="filter-text open">营业中</span> </span> 
+                                               <span class="filter-divider"></span> 
+                                               <span class="filter-btn activity-filter" pinyin="online_payment" ubt-change="filter_online_payment"> <input type="checkbox" name="filter" /><span class="filter-text online_payment with-icon">在线支付<span class="new_icon"></span></span> </span> 
+                                               <span class="filter-btn activity-filter" pinyin="chaoshipeifu" ubt-change="filter_chaoshipeifu"> <input type="checkbox" name="filter" /><span class="filter-text chaoshipeifu with-icon">超时赔付</span> </span> 
+                                               <div class="flavorblock"> 
+                                                    <div class="flavor-dropdown-toggle" data-toggle="dropdown">
+                                                     <a>口味<b class="caret"></b></a>
+                                                    </div> 
+                                                    <ul class="flavor-dropdown-menu" style="display:none"> 
+                                                       <li class="flavor all filter-btn"><a>全部</a></li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="zhongshi"> <a>中式</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="xishi"> <a>西式</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="gangshi"> <a>港式</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="naichahanbao"> <a>奶茶</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="shaokao"> <a>烧烤</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="rishi"> <a>日式</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="hanshi"> <a>韩式</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="tiandian"> <a>甜点</a> </li> 
+                                                       <li class="flavor filter-btn flavor-filter" pinyin="hanbao"> <a>汉堡</a> </li> 
+                                                    </ul> 
+                                               </div> 
+                                               <div class="deliver-slider-wrapper "> 
+                                                    <span id="deliver-amount-level">全部</span> 
+                                                    <div class="slider-wrapper"> 
+                                                     <div id="geo_deliver_slider" class="deliver-slider ui-eleme slider tool-tip" title="起送价" level="4" max="4" min="1"></div> 
+                                                    </div> 
+                                                    <span>起送价</span> 
+                                               </div> 
+                                          </div> 
+                                     </div> 
+                                 <!--<div class="span2">
+                                              </div>--> 
+                                </div> 
+                           </div> 
+                           <div class="span12 category-restaurant-header with-restaurant-filter area-activities"> 
+                                <div class="area-activities-other"> 
+                                     <span class="filter-btn activity-filter" pinyin="Activity_14337"> <input type="checkbox" name="filter" /><span class="filter-text Activity_14337">闪电红包</span> </span> 
+                                     <span class="filter-btn activity-filter" pinyin="new_user_discount"> <input type="checkbox" name="filter" /><span class="filter-text new_user_discount">首次下单立减</span> </span> 
+                                     <span class="filter-btn activity-filter" pinyin="extra_discount"> <input type="checkbox" name="filter" /><span class="filter-text extra_discount">满立减</span> </span> 
+                                </div> 
+                           </div> 
+                           <div class="span12"> 
+                              <table class="restaurant-list-table"> 
+                                 <tbody> 
+                                    <tr> 
+                                       <td> 
+                                          <div class="restaurant-block  " id="restaurant-31767" rel="31767" data-restaurantid="31767"> 
+                                             <div class="favor-book"> 
+                                                <span class="favor-icon hidden"></span> 
+                                                <a href="#" class="hover-add-favor hidden entry-favor" rel="31767">收藏</a> 
+                                                <a href="#" class="hover-un-favor hidden entry-un-favor" rel="31767">取消收藏</a> 
+                                             </div> 
+                                             <div class="line-one"> 
+                                                <div class="logo-wrapper"> 
+                                                   <div class="logo"> 
+                                                      <div class="conform-logo-person"></div> 
+                                                      <a href="http://r.ele.me/pt-jiachangcaiguan" target="_blank"><img class="restaurant-logo" alt="家常菜馆" srcset="http://fuss10.elemecdn.com/1/58/0d222209ec79983459a9d032acb62jpeg.jpeg?w=42&amp;h=42 1x, http://fuss10.elemecdn.com/1/58/0d222209ec79983459a9d032acb62jpeg.jpeg?w=84&amp;h=84 2x" /></a> 
+                                                   </div> 
+                                                   <div class="deliver-time-wrapper busy tooltip_on" data-toggle="tooltip" title="餐厅送餐时间超过45分钟">
+                                                     45+分钟 
+                                                   </div> 
+                                                </div> 
+                                                <div class="info"> 
+                                                     <div class="name"> 
+                                                      <a class="restaurant-link" href="http://r.ele.me/pt-jiachangcaiguan" target="_blank">家常菜馆</a> 
+                                                     </div> 
+                                                     <div class="flavors ">
+                                                       中式 
+                                                     </div> 
+                                                     <div class="ratings "> 
+                                                        <div class="r9 rating-star" title="餐厅评价：4.4星"></div> 
+                                                        <span class="rating-number">8577份</span> 
+                                                     </div> 
+                                                     <div class="icons"> 
+                                                        <span class="restaurant-icons online-payment tooltip_on" data-toggle="tooltip" title="该餐厅支持在线支付">&nbsp;</span> 
+                                                        <span class="restaurant-icons extra-discount tooltip_on" data-toggle="tooltip" title="在线支付满20减10">&nbsp;</span> 
+                                                        <span class="restaurant-icons new-user-discount tooltip_on" data-toggle="tooltip" title="饿了么新用户在该餐厅下首单，可立减15元">&nbsp;</span> 
+                                                     </div> 
+                                                </div> 
+                                             </div> 
+                                           <div class="hidden line-hover-dlg" id="restaurant-hover-dlg-content-31767"> 
+                                              <div class="restaurant-panel"> 
+                                                 <span class="favor-icon hidden"></span> 
+                                                 <div class="restaurant-more-info"> 
+                                                    <div style="font-size:15px; margin-left:10px;">
+                                                     家常菜馆
+                                                    </div> 
+                                                    <div class="divider hidden"></div> 
+                                                    <ul class="icons"> 
+                                                       <li> <img class="restaurant-icons certification" title="该商家已通过个人身份认证" src="home/images/passIcon_s_01.png?v=1" /> <span class="desc" title="">该商家已通过个人身份认证</span> </li> 
+                                                       <li> <span class="restaurant-icons online-payment" title="该餐厅支持在线支付">&nbsp;</span> <span class="desc" title="">该餐厅支持在线支付</span> </li> 
+                                                       <li> <span class="restaurant-icons extra-discount" title="在线支付满20减10">&nbsp;</span> <span class="desc" title="">在线支付满20减10</span> </li> 
+                                                       <li> <span class="restaurant-icons new-user-discount" title="饿了么新用户在该餐厅下首单，可立减15元">&nbsp;</span> <span class="desc" title="">饿了么新用户在该餐厅下首单，可立减15元</span> </li> 
+                                                    </ul> 
+                                                    <div class="divider hidden"></div> 
+                                                    <p class="ann"><strong>公告:</strong>&nbsp;美食配送均需要时间，为了不影响您的及时用餐，请大家提前一小时预订，如遇特殊天气请提前至少1-2小时预订。避开订餐高峰期！下订单后请确认地址是否正确，若送去地址错误的加收3—5元外送费！望理解！ 早上10点前下单，且满100元可赠大饮料一瓶。 另本店可提供团体订餐，欢迎来电咨询</p> 
+                                                    <p class="restaurant-deliver-desc"><strong>起送价:</strong>&nbsp;到登科保洁(长寿路店) 16元。 （额外说明：周六周日八点半开始送)</p> 
+                                                    <p><strong>地址:</strong>&nbsp;西康路1391号</p> 
+                                                    <p><strong>营业时间:</strong>&nbsp;08:00 - 23:00</p> 
+                                                    <p><strong>简介:</strong>&nbsp;本店以家常菜为主，欢迎预订！百元以上订单请至少提前1至三个小时预订！</p> 
+                                                 </div> 
+                                              </div> 
+                                           </div> 
+                                          </div> 
+                                       </td> 
+                                    </tr>
+                                  </tbody> 
+                              </table> 
+                           </div> 
+                      </div> 
+                   </div> 
+                </div> 
+                <div class="geoplace-activities clearfix" data-v5-host="v5.ele.me"> 
+                   <a class="gp-activity-block" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'middle-activities', 'click', 'hot_foods']);" target="_blank" href="http://ele.me/entry/findhotfood" id="activity-hot_foods"><img src="home/images/4f1385094a51bc1816c65b3ea6da9gif.gif" title="热卖美食" /></a> 
+                   <a class="gp-activity-block" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'middle-activities', 'click', 'try_order_flow']);" target="_blank" href="http://ele.me/31265430" id="activity-try_order_flow"><img src="home/images/ca212e55bbfb137346e429de97fb8gif.gif" title="体验订餐流程" /></a> 
+                   <a class="gp-activity-block" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'middle-activities', 'click', 'mobile_app']);" target="_blank" href="mobile.html" id="activity-mobile_app"><img src="home/images/fe03c44f1fab3448d2df24625da50gif.gif" title="mobile_app" /></a> 
+                   <a class="gp-activity-block" onclick="_gaq.push(['_trackEvent', 'middle-activities', 'click', 'shuiqunawaimai']);" title="谁去拿外卖" id="activity-shuiqunawaimai"><img src="home/images/0728055c786e1f250b783a0386a34gif.gif" title="谁去拿外卖" /></a> 
+                   <a class="gp-activity-block" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'middle-activities', 'click', 'faq']);" target="_blank" href="help.html" id="activity-faq"><img src="home/images/4dfa08f216bf0bf39978f3d193855gif.gif" title="常见问题" /></a> 
+                </div> 
+                <div style="border-left: 2px solid #f5f5f5; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); margin: 0 -2px 15px 0;"> 
+                   <div class="category-restaurant-header">
+                      <span class="title">附近团购</span>
+                   </div> 
+                   <div style="background: #fff;"> 
+                      <iframe src="http://eleme.expc.dianping.com/site/frame/near_deals?latitude=31.239567&amp;longitude=121.437477&amp;count=5" frameborder="0" scrolling="no" style="width:100%; height:92px; display: block;"></iframe> 
+                   </div> 
+                </div> 
+                
+                <div id="modal-add-favor" class="modal hide fade" aria-hidden="true" tabindex="-1"> 
+                   <div class="modal-header"> 
+                      <a href="#" class="close" aria-hidden="true">&times;</a> 
+                      <h3>收藏你喜欢的餐厅</h3> 
+                   </div> 
+                   <div class="modal-body"> 
+                   </div> 
+                   <div class="modal-footer"> 
+                      <a href="#" class="btn btn-yellow complete">完成收藏</a> 
+                   </div> 
+                </div> 
+                <div id="copy_dlg_restaurant" class="restaurant-hover-dlg right hidden"> 
+                   <div class="wrapper dark_shadow"> 
+                      <div class="callout_tip"></div> 
+                      <div class="detail"> 
+                      </div> 
+                   </div> 
+                </div> 
+                <div id="modal-shuiqunawaimai" class="modal-who-get-dishes modal hide fade" aria-hidden="true" tabindex="-1"> 
+                   <div class="modal-header"> 
+                      <a href="#" class="close" aria-hidden="true">&times;</a> 
+                      <h3>谁去拿外卖</h3> 
+                   </div> 
+                   <div class="modal-body"> 
+                      <div class="who-get-dishes-wrapper"> 
+                         <h2 class="wgd-badge"></h2> 
+                         <a id="trigger" class="wgd-btn"></a> 
+                         <span class="wgd-rules">随机到最小数字的人去拿外卖</span> 
+                         <span id="lastResult" class="wgd-bg-text">↓ Start</span> 
+                         <ul id="result" class="wgd-result-list"></ul> 
+                      </div> 
+                   </div> 
+                </div> 
+                <script type="text/javascript"> _gaq.push(['_trackEvent', 'view_place', 'forward', '-615736186413943440']);</script> 
+             </div> 
+             <div id="site_fixed" class="site-fixed"> 
+                <a id="back_top" class="btn-back-top ui_invisible" role="button" title="回顶部"><i class="icon-backtop"></i></a> 
+                <div class="btn-app-qrcode"> 
+                   <i class="icon-qrcode"></i> 
+                   <img class="img-qrcode" src="home/images/app-qrcode.png" alt="扫描二维码免费下载手机App" /> 
+                </div> 
+                <a class="btn-setup-shop" href="http://kaidian.ele.me" target="_blank">我要开店</a> 
+                <a class="btn-setup-shop" href="help.html" target="_blank">热门问题</a> 
+                <!-- Live800在线客服图标:在线客服[文本图标] 开始--> 
+                <a class="btn-setup-shop" id="customerservice" target="_blank" href="JavaScript:">在线客服</a> 
+                <script>
+                      document.getElementById('customerservice').href="/customerservice?jid=1820947377&companyID=402791&configID=123801&title="+encodeURIComponent(document.title);
+                </script> 
+                <!-- 在线客服图标:在线客服 结束--> 
+             </div> 
+             <div id="modal_globalLogin" class="modal-global-login modal hide fade" aria-hidden="true" tabindex="-1"> 
+                <a class="close" aria-hidden="true">&times;</a> 
+                <iframe class="ilogin-iframe login_frame" src="https://account.ele.me/ilogin" frameborder="0" scrolling="no"></iframe> 
+             </div> 
+             <footer class="site-footer"> 
+                <p class="sfooter-link-list"> 
+                    <a class="sfooter-link" href="http://kaidian.ele.me">我要开店</a> 
+                    <a class="sfooter-link" href="contact.html">联系我们</a> 
+                    <a class="sfooter-link" href="agreement.html">服务条款和协议</a> 
+                    <a class="sfooter-link" href="sitemaps.html">站点地图</a> 
+                    <a class="sfooter-link" href="http://jobs.ele.me">加入我们</a> 
+                </p> 
+                <p> 
+                  增值电信业务许可证：<a class="sfooter-link sfooter-link-zero" target="_blank" rel="nofollow" href="http://www.shca.gov.cn">沪B2-20150033</a> 
+                  <a class="sfooter-link" target="_blank" rel="nofollow" href="http://www.miibeian.gov.cn">沪ICP备 09007032</a> 
+                  <a class="sfooter-link" target="_blank" rel="nofollow" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120305173227823">上海工商行政管理</a> 
+                  Copyright &copy;2008-2015 ele.me, All Rights Reserved. 
+                </p> 
+             </footer> 
+          </div> 
+          <script type="text/javascript" src="{{ asset('home/js/foot_201503262210.js') }}"></script> 
+          <script src="{{ asset('home/js/geoplace_201503262210.js') }}"></script> 
+     </body>
+</html>
