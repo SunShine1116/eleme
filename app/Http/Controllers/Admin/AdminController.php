@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
+    
     public function index()
     {
         //显示后台首页

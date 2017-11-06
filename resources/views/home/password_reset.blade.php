@@ -34,8 +34,8 @@
     ELEME.timeDelta = 1427465196 - new Date().getTime()/1000;
   ELEME.payHost = "p.ele.me";
   </script> 
-  <link class="usemin" rel="stylesheet" href="home/css/global_rebuild.a739f3af.css" /> 
-  <link class="usemin" rel="stylesheet" href="home/css/account_rebuild.54cf8909.css" /> 
+  <link class="usemin" rel="stylesheet" href="{{ asset('home/css/global_rebuild.a739f3af.css') }}" /> 
+  <link class="usemin" rel="stylesheet" href="{{ asset('home/css/account_rebuild.54cf8909.css') }}" /> 
  </head> 
  <body class="page-account"> 
   <header class="header"> 
@@ -65,7 +65,7 @@
   </header> 
   <div class="container clrfix"> 
    <aside class="banner"> 
-    <img class="img" src="images/banner-app.75596728.png" alt="随时随地轻松订餐" /> 
+    <img class="img" src="{{ asset('home/images/banner-app.75596728.png') }}" alt="随时随地轻松订餐" /> 
    </aside> 
    <div class="panel"> 
     <div class="panel-hd clrfix"> 
@@ -103,36 +103,9 @@
     <p class="sfooter-line"> 增值电信业务许可证：<a class="sfooter-link sfooter-link-zero" target="_blank" rel="nofollow" href="http://www.shca.gov.cn">沪B2-20150033</a> <a class="sfooter-link" target="_blank" rel="nofollow" href="http://www.miibeian.gov.cn">沪ICP备 09007032</a> <a class="sfooter-link" target="_blank" rel="nofollow" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120305173227823">上海工商行政管理</a> Copyright &copy;2008-2015 ele.me, All Rights Reserved. </p> 
    </div> 
   </footer> 
-  <script class="usemin" src="home/js/vendor_rebuild.e3fae7ec.js"></script> 
-  <script class="usemin" src="home/js/account_rebuild.9e3ebcc8.js"></script> 
+  <script class="usemin" src="{{ asset('home/js/vendor_rebuild.e3fae7ec.js') }}"></script> 
+  <script class="usemin" src="{{ asset('home/js/account_rebuild.9e3ebcc8.js') }}"></script> 
   <!-- UBT --> 
-  <script>
-  UBT.send('PV', {
-    resolution: window.screen ? screen.width + 'x' + screen.height : null,
-    location: location.href,
-    referrer: document.referrer
-  });
-  </script> 
-  <!-- fingerprint --> 
-  <script>
-  // fingerprint
-  void function() {
-    // 已存在 fingerprint 则不做处理
-    var fingerprint = document.cookie.match(/(?:^|; )track_fingerprint_1=(.*?)(?:; |$)|$/)[1];
-    if(fingerprint) return;
-    // 发送 fingerprint data
-    var fin = new Fingerprint();
-    var data = fin.get();
-    var track_id = document.cookie.match(/(?:^|; )track_id=(.*?)(?:; |$)|$/)[1];
-    var xhr = !-[1,] ? new XDomainRequest() : new XMLHttpRequest();
-    xhr.open('POST', '//restapi.ele.me/v1/browser_fingerprints', true);
-    var package = { track_id: track_id, json_string: JSON.stringify(data) };
-    xhr.send(JSON.stringify(package));
-    // 计算 fingerprint 种下 cookie
-    var fingerprint = fin.murmurhash3_32_gc(JSON.stringify(package), 31);
-    var domain = document.domain.match(/[\w-]+\.?[\w-]+$/)[0];
-    document.cookie = 'track_fingerprint_1=' + fingerprint + '; Expires=Wed, 31 Dec 2098 16:00:00 GMT; Domain=' + domain + '; Path=/';
-  }();
-  </script>   
+  
  </body>
 </html>

@@ -8,7 +8,7 @@
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+|   
 */
 
 
@@ -25,7 +25,7 @@ Route::group(['prefix' => 'home'],function(){
 	Route::get('/agreement', function () {return view('home.agreement');});
 	//地图
 	Route::get('/city','home\IndexController@city');
-	Route::get('/doCity', 'home\IndexController@doCity');
+	
 	Route::get('/sitemap_detail', function () {return view('home.sitemap_detail');});
 	Route::get('/sitemaps', function () {return view('home.sitemaps');});
 	//关于我们
@@ -106,6 +106,10 @@ Route::group(['prefix' => 'home'],function(){
 
 });
 
+
+
+
+
 //后台路由群组
 Route::group(['prefix' => 'admin'],function(){
 
@@ -120,11 +124,13 @@ Route::group(['prefix' => 'admin'],function(){
 	Route::get('/user', 'Admin\UserController@index');
 	//后台用户列表
 	Route::get('/user/create', 'Admin\UserController@create');
-	//后台管理员
-	Route::get('/admin', 'Admin\GuanController@index');
-	//后台管理员添加
-	Route::get('/admin/create', 'Admin\GuanController@create');
 	
+
+	//后台管理员
+	Route::resource('/admin', 'Admin\GuanController');
+	
+	
+
 	//后台分类列表
 	Route::get('/classify', 'Admin\ClassifyController@index');
 	//后台分类添加
@@ -149,6 +155,14 @@ Route::group(['prefix' => 'admin'],function(){
 Route::get('admin/login', 'Admin\LoginController@index');
 Route::post('admin/login', 'Admin\LoginController@doLogin');
 Route::get('admin/logout', 'Admin\LoginController@dologout');
+
+
+
+
+
+
+
+
 
 //商家路由群组
 Route::group(['prefix' => 'store'], function () {
@@ -177,6 +191,8 @@ Route::group(['prefix' => 'store'], function () {
 
 	//账本页面
 	Route::get('/account', 'store\AccountController@index');
+	
+
 
 	//设置页面
 	Route::get('/set', 'store\SetController@index');
@@ -189,8 +205,22 @@ Route::group(['prefix' => 'store'], function () {
 	//问题反馈页面
 	Route::get('/question', 'store\QuestionController@index');
 
-	//商家登录页面
-	Route::get('/login', 'store\UserController@login');
-	//商家注册页面
-	Route::get('/signUp', 'store\UserController@signUp');
+
 });
+
+
+	//商家登录页面
+	Route::get('/store/login', 'store\UserController@login');
+	//登录执行
+	Route::post('/store/dologin', 'store\UserController@dologin');
+	
+
+	//商家注册页面
+	Route::get('/store/signUp', 'store\UserController@signUp');
+	//判断手机号是否正确
+	Route::post('/store/dosignUp', 'store\UserController@dosignUp');
+	Route::get('/store/checkcode', 'store\UserController@checkcode');
+	//发送手机验证码路由
+	Route::get('/store/sendcode','store\UserController@sendcode');
+
+

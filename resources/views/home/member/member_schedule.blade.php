@@ -6,11 +6,7 @@
       </div>
       <!--end content-header--> 
       <div class="content-inner"> 
-       <div id="trade_record_filter" class="trade-record-filter"> 
-        <p>分类： <span class="trade-record-filter-lineone"><a class="active" href="member_schedule.html">全部</a></span> <span><a href="/profile/records/category/takeout">叫外卖</a></span> <span><a href="/profile/records/category/charge">充值</a></span> <span><a href="/profile/records/category/refund">退单</a></span> </p> 
-        <p>日期： <span class="trade-record-filter-lineone"><a href="/profile/records/date/today">今天</a></span> <span><a href="/profile/records/date/7days">近7天</a></span> <span><a href="/profile/records/date/15days">近15天</a></span> <span><a href="/profile/records/date/1month">1个月</a></span> </p> 
-        <p>状态： <span class="trade-record-filter-lineone"><a class="active" href="member_schedule.html">全部</a></span> <span><a href="/profile/records/status/processing">进行中</a></span> <span><a href="/profile/records/status/success">成功</a></span> <span><a href="/profile/records/status/fail">失败</a></span> </p> 
-       </div>
+      
        <!--end trade_record_filter--> 
        <table class="table table-striped records-table"> 
         <thead> 

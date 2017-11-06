@@ -26,18 +26,25 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form" action="" method="post" enctype='multipart/form-data'> 
-                                        
+                                    @if (session('msg'))
+                                   
+                                        <script>
+                                            alert("{{ session('msg') }}");
+                                        </script>
+                                    @endif
+                                    <form  action="/admin/admin" method="post" enctype='multipart/form-data'> 
+                                         {{ csrf_field() }}
+                                         {{--<input type="hidden" name="_token" value="{{csrf_token()}}">--}}
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">账户名</span>
-                                            <input type="text" class="form-control" name='aname' placeholder="">
+                                            <input type="text" class="form-control" name='aname' placeholder="请输入您的账号">
                                         </div>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">密码</span>
-                                            <input type="password" class="form-control" name='apwd' placeholder="">
+                                            <input type="password" class="form-control" name='apwd' placeholder="请输入您的密码">
                                         </div>
                                         <button type="submit" class="btn btn-default">提交</button>
-                                        <button type="reset" class="btn btn-default">重置</button>
+                                        
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->

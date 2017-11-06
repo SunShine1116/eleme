@@ -7,16 +7,15 @@ use App\Http\Controllers\Controller;
 use DB;
 class IndexController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-
-    	//获取登录的Uid 根据UID查询收藏表中的商家信息表获取商家信息
-    	// $uid = '';
-    	$collection = DB::table('collection')
-            ->leftJoin('seller_detail', 'collection.sid', '=', 'seller_detail.sid')
-            // ->where('collection.uid', '=' ,$uid)
-			->get();
-    	return view('home.index',['collection'=>$collection]);
+       
+        if(empty($_GET['cityname'])){
+             $cityname = '北京';
+        }else{
+            $cityname = $_GET['cityname'];
+        }
+        return view('home.index',['cityname'=>$cityname]);
     }
 
     public function city(Request $request)
@@ -24,9 +23,5 @@ class IndexController extends Controller
     	return view('home.city');
     }	
 
-    public function doCity()
-    {
-        // $aa = $_GET['cityname']
-        return redirect('/home/index');
-    }
+    
 }

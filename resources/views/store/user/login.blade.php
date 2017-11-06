@@ -20,6 +20,8 @@
 
 </head>
 
+
+
 <body data-type="login" style="background: #282D2F">
     <div class="am-g tpl-g">
         <div class="tpl-login">
@@ -29,18 +31,22 @@
                     <img src="{{ asset('assets/img/logo_black_msg.jpg') }}">
                 </div>
 
+                @if (session('msg'))
+                    <script>
+                        alert("{{ session('msg') }}");
+                    </script>
+                @endif
 
-
-                <form class="am-form tpl-form-line-form">
+                <form class="am-form tpl-form-line-form" action="/store/dologin" method="post">
+                    {!! csrf_field() !!}
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入账号">
-
+                        <input type="text" class="tpl-form-input" id="user-name" name="sname" placeholder="请输入手机号">
                     </div>
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
-
-                    </div>
+                        <input type="password" class="tpl-form-input" id="user-name" name="password" placeholder="请输入密码">
+                     </div>
+                   
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
@@ -52,7 +58,7 @@
 
                     <div class="am-form-group">
 
-                        <button type="button" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</button>
+                        <input type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">
 
                     </div>
                 </form>

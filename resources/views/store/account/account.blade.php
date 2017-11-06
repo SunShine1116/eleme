@@ -11,14 +11,18 @@
                                 <div class="widget-title  am-cf">对账账单</div>
                             </div>
                             <div class="widget-body  am-fr">
+                            
+
+                            <form action="{{ url('store/account') }}">
                                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
                                     <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-                                        <input type="text" class="am-form-field " placeholder="搜索账单">
+                                        <input type="text" class="am-form-field " name="transaction_hour" placeholder="搜索账单">
                                         <span class="am-input-group-btn">
-            								<button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
-          								</span>
+            								<button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="submit"></button>
+                                        </span>
                                     </div>
                                 </div>
+                            </form>  
 
                                 <div class="am-u-sm-12">
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
@@ -26,39 +30,35 @@
                                             <tr>
                                                 <th>交易时间</th>
                                                 <th>交易额</th>
-                                                <th>交易明细</th>
+                                                <th>交易单号</th>
                                             </tr>
                                         </thead>
+                                         @foreach ($accounts as $account)
                                         <tbody>
                                             <tr class="gradeX">
-                                                <td>2017-9-26 15:30:36</td>
-                                                <td>+￥160.00</td>
-                                                <td>一笔订单交易</td>
+                                                <td>{{ $account->transaction_hour }}</td>
+                                                <td>+￥{{ $account->transaction_amount }}</td>
+                                                <td>订单</td>
                                             </tr>
                                             <!-- more data -->
                                         </tbody>
+                                         @endforeach
                                     </table>
                                 </div>
                                 <div class="am-u-lg-12 am-cf">
-
                                     <div class="am-fr">
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
+                                        <ul class="am-pagination tpl-" style="">
+                                          {{ $accounts->appends(['$where'])->links() }}
                                         </ul>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+<!-- {!! $accounts->render() !!} -->
 
 @endsection

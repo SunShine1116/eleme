@@ -29,27 +29,35 @@
                 <span class="tpl-login-content-info">
                   创建一个新的商家
               </span>
+                @if (session('msg'))
+                    <script>
+                        alert("{{ session('msg') }}");
+                    </script>
+                @endif
 
-
-                <form class="am-form tpl-form-line-form">
+               <!-- action="/store/dosignUp" method="post" -->
+                <form class="am-form tpl-form-line-form" action="{{url('/store/dosignUp')}}" method="post">
+                     {!! csrf_field() !!}
+                  
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="店主手机">
+                        <input type="text" class="tpl-form-input" id="phone" placeholder="店主手机" name="tel" >
                     </div>
                     <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="验证码">
+                        <input type="text" class="tpl-form-input" id="code" placeholder="验证码" onblur='CheckCode()'>
                         <span class="am-input-group-btn">
-                            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field" type="button">获取验证码</button>
+                            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field" type="button" value="获取验证码" onclick="sendCode()">获取验证码</button>
                         </span>
                     </div>
+                    <p id="tishiyu" style="display:none;color:red;">验证码不正确，请重新输入</p> 
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
+                        <input name="pwd" type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
                     </div>
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="再次输入密码">
+                        <input name="repwd" type="password" class="tpl-form-input" id="user-name" placeholder="再次输入密码">
                     </div>
-
+                    
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
@@ -58,24 +66,66 @@
                          </label>
 
                     </div>
+                     <div class="am-form-group">
 
-
-
-
-
-
-                    <div class="am-form-group">
-
-                        <button type="button" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</button>
+                        <button type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn" >提交</button>
 
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <script src="{{ asset('assets/js/amazeui.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script>
+     
+       function sendCode(){
+        var phone = $('#phone').val();
+      
+            $.ajax({
+                 url: '/store/sendcode',
+                 method:'get',
+                 async:true,
+                 data:{phone:phone},
+                 success:function(data){
+                    if(data == 'ok'){
+                        alert('验证码发送成功，请注意查收！');
+                    }else{
+                        alert(data);
+                    }
+                 },
+                error:function(){
+                    alert('验证码发送失败！');
+                }
+            });
+        }
 
+        function CheckCode(){
+        var code = $('#code').val();
+      
+            $.ajax({
+                 url: '/store/checkcode',
+                 method:'get',
+                 async:true,
+                 data:{code:code},
+                 success:function(data){
+                    if(data == 'ok'){
+                        $("#tishiyu").css("display","none");
+                    }else{
+                        $("#tishiyu").css("display","block");
+                    }
+                 },
+                error:function(){
+                    alert('验证码比对失败');
+                }
+            });
+        }
+
+
+            
+</script>
 </body>
 
 </html>

@@ -9,15 +9,15 @@
                 <div class="title">Laravel 5.1</div>
             </div>
 
-            <form action="/func" method='get'>
+            
                 手机号：<input type="text" id="phone">
                 <button type="button" onclick="doCode()" value="获取验证码">获取验证码</button>
-            </form>
+          
            
         </div>
         
     </body>
-    <script src="jquery-1.8.3.min.js"></script>
+     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script>
    
     function doCode(){

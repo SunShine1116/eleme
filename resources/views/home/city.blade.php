@@ -44,8 +44,12 @@
         // alert(e.poi.name);
         placeSearch.setCity(e.poi.adcode);
         placeSearch.search(e.poi.name);  //关键字查询查询
-        window.location = '/home/doCity?cityname='+e.poi.name;
-      
+        window.location = '/home/index?cityname='+e.poi.name;
+        // $.post('/home/index', {'_token':'{{csrf_token()}}','cityname':'e.poi.name'},function(){
+
+        //         aaa 
+        // });
+        
     }
 
    

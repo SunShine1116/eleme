@@ -24,15 +24,16 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form" action="" method="post" enctype='multipart/form-data'> 
-                                        
+                                    <form  action="{{ url('admin/admin/'.$list->aid) }}" method='post'> 
+                                        {{ csrf_field() }}
+                                        {{ method_field('PUT') }}
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">账户名</span>
-                                            <input type="text" class="form-control" name='aname' placeholder="" value=''>
+                                            <input type="text" class="form-control" name='aname' placeholder="" value='{{ $list->aname }}'>
                                         </div>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon">密码</span>
-                                            <input type="text" class="form-control" name='apwd' placeholder="" value=''>
+                                            <input type="text" class="form-control" name='apwd' placeholder="" value='{{ $list->apwd }}'>
                                         </div>
                                         <button type="submit" class="btn btn-default">修改</button>
                                         <button type="reset" class="btn btn-default">重置</button>
