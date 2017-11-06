@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/amazeui.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/amazeui.datatables.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <!-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 
 </head>

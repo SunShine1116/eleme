@@ -49,7 +49,6 @@
                                     <span class="input-group-addon"><input type="submit" value="搜索"></span>
                                 </div>
                             </form>
-                                
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
@@ -75,11 +74,10 @@
                                      @endforeach
                                 </table>
                             </div>
-                           
-                           <div class="am-u-lg-12 am-cf">
+                            <div class="am-u-lg-12 am-cf">
                                 <div class="am-fr">
-                                    <ul class="am-pagination tpl-" style="">
-                                      {{ $lists->appends(['$where'])->links() }}
+                                    <ul class="am-pagination tpl-" >
+                                       {{ $lists->appends(['$where'])->links() }}
                                     </ul>
                                 </div>
                             </div>

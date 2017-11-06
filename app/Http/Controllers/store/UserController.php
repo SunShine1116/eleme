@@ -92,16 +92,23 @@ class UserController extends Controller
         $repwd = $request->repwd;
         $phone = $request->tel;
         // dd($phone);
-        if($pwd == $repwd){
-            // 插入数据库
-            $user = DB::insert('insert into seller (sname, spwd,status) values (?, ?,?)', [$phone, $pwd,1]);
-            // 保存到session中
-            $request->session()->push('seller', $phone);
-            // session([$phone => $phone]);  
-            return redirect('admin/index')->with('$suser', '$phone');
-             
+        if ( empty(trim($phone)) || empty(trim($repwd)) || empty(trim($pwd))) {
+            // 返回
+           return back()->with('msg', '用户名或密码不能为空');
+
         }else{
-            return back()->with('msg', '密码输入不一致，重新输入');
+            
+            if($pwd == $repwd){
+                // 插入数据库
+                $user = DB::insert('insert into seller (sname, spwd,status) values (?, ?,?)', [$phone, $pwd,1]);
+                // 保存到session中
+                $request->session()->push('seller', $phone);
+                // session([$phone => $phone]);  
+                return redirect('admin/index')->with('$suser', '$phone');
+                 
+            }else{
+                return back()->with('msg', '密码输入不一致，重新输入');
+            }
         }
 
     }
